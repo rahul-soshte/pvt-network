@@ -49,3 +49,10 @@ capabilities and configuration parameters that it exposes:
 ```shell
 ./target/release/node-template --help
 ```
+
+### Adding the keys to the keystore
+```
+curl http://localhost:9934 -H "Content-Type:application/json;charset=utf-8" -d "@/aura_key_pair_2.json"  
+```
+
+Similiarly one needs to do it for all keys. Add the Grandpa and Aura key for the particular node. And restart the node.
