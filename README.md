@@ -56,3 +56,13 @@ curl http://localhost:9934 -H "Content-Type:application/json;charset=utf-8" -d "
 ```
 
 Similiarly one needs to do it for all keys. Add the Grandpa and Aura key for the particular node. And restart the node.
+
+### Creating a custom spec(Not needed but necessarily documented)
+
+```
+./target/release/node-template build-spec --disable-default-bootnode --chain local > customSpec.json
+```
+
+```
+./target/release/node-template build-spec --chain=customSpec.json --raw --disable-default-bootnode > customSpecRaw.json
+```
